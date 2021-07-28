@@ -1,17 +1,11 @@
-// export const rock = 0
-// export const paper = 1
-// export const scissors = 2
-
-export let players = new Map()
-// const signs = ['rock', 'paper', 'scissors']
+export const rock = 0
+export const paper = 1
+export const scissors = 2
 
 export const signs = new Map()
 signs.set(0, 'rock')
 signs.set(1, 'paper')
 signs.set(2, 'scissors')
-
-players.set('player1', 0)
-players.set('player2', 2)
 
 export function winner(players) {
     let iterator = players.values()

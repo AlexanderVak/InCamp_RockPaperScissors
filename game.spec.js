@@ -1,24 +1,21 @@
-import { paper, players, rock, scissors, winner } from "./game";
+import { paper, rock, scissors, winner } from "./game";
 let rockWins = new Map([
-    ['player1', 0],
-    ['player2', 2]
+    ['player1', rock],
+    ['player2', scissors]
 ])
 let paperWins = new Map([
-    ['player1', 0],
-    ['player2', 1]
+    ['player1', rock],
+    ['player2', paper]
 ])
 let scissorsWins = new Map([
-    ['player1', 2],
-    ['player2', 1]
+    ['player1', scissors],
+    ['player2', paper]
 ])
 let draw = new Map([
-    ['player1', 2],
-    ['player2', 2]
+    ['player1', scissors],
+    ['player2', scissors]
 ])
 describe('rock-paper-scissors', () => {
-    // it('should show winner', () => {
-    //     expect(winner(players)).toBe('p1 wins')
-    // });
     it('rock should win', () => {
         expect(winner(rockWins)).toBe('rock wins')
     });
